@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Emotion Detection System 😊</h1>
+    <p>Tell us how you feel, and we’ll ask personalized questions to help you.</p>
+
+    <!-- Buttons for selecting emotions -->
+    <button onclick="askQuestion('happy')">I'm Happy 😊</button>
+    <button onclick="askQuestion('sad')">I'm Sad 😔</button>
+    <button onclick="askQuestion('angry')">I'm Angry 😡</button>
+    <button onclick="askQuestion('stressed')">I'm Stressed 😖</button>
+
+    <!-- Section to display the question -->
+    <div id="question-section"></div>
+
+    <!-- Section to display the suggestion -->
+    <div id="suggestion-section"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
