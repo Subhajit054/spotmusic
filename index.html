@@ -3,25 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emotion Detection System</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SpotMusic - Your Music, Your Way</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>Emotion Detection System 😊</h1>
-    <p>Tell us how you feel, and we’ll ask personalized questions to help you.</p>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="SpotMusic Logo" />
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">Playlists</a>
+            <a href="#">Search</a>
+        </nav>
+    </header>
 
-    <!-- Buttons for selecting emotions -->
-    <button onclick="askQuestion('happy')">I'm Happy 😊</button>
-    <button onclick="askQuestion('sad')">I'm Sad 😔</button>
-    <button onclick="askQuestion('angry')">I'm Angry 😡</button>
-    <button onclick="askQuestion('stressed')">I'm Stressed 😖</button>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to SpotMusic</h1>
+                <p>Discover the best music, explore new tracks, and create your own playlists!</p>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </section>
 
-    <!-- Section to display the question -->
-    <div id="question-section"></div>
+        <section class="music-player">
+            <div class="music-info">
+                <h2>Now Playing: "Song Title"</h2>
+                <p>Artist: "Artist Name"</p>
+            </div>
+            <audio controls>
+                <source src="assets/audio/song1.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
 
-    <!-- Section to display the suggestion -->
-    <div id="suggestion-section"></div>
+        <section class="playlists">
+            <h2>Top Playlists</h2>
+            <div class="playlist">
+                <div class="playlist-item">
+                    <img src="assets/images/bg-image.jpg" alt="Playlist 1">
+                    <h3>Playlist Name</h3>
+                </div>
+                <div class="playlist-item">
+                    <img src="assets/images/bg-image.jpg" alt="Playlist 2">
+                    <h3>Playlist Name</h3>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 SpotMusic - All rights reserved</p>
+    </footer>
 </body>
 </html>
