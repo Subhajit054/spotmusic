@@ -1,63 +1,72 @@
-// Placeholder function for search functionality
-function searchSongs() {
-    const searchTerm = document.getElementById('search').value.toLowerCase();
-    const songs = document.querySelectorAll('.song');
-    
-    songs.forEach(song => {
-        const title = song.querySelector('h3').innerText.toLowerCase();
-        if (title.includes(searchTerm)) {
-            song.style.display = 'block';  // Show song
-        } else {
-            song.style.display = 'none';  // Hide song
-        }
-    });
-}
-// Initialize Firebase
-const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
-
-const app = firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-
-// Sign up function
-function signUp() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    auth.createUserWithEmailAndPassword(email, password)
-        .then(() => {
-            alert('User signed up successfully');
-        })
-        .catch((error) => {
-            alert('Error: ' + error.message);
-        });
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
 }
 
-// Login function
-function login() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    auth.signInWithEmailAndPassword(email, password)
-        .then(() => {
-            alert('User logged in successfully');
-        })
-        .catch((error) => {
-            alert('Error: ' + error.message);
-        });
+header {
+    background-color: #1DB954;
+    padding: 20px;
 }
 
-// Firebase listener for user authentication state
-auth.onAuthStateChanged((user) => {
-    if (user) {
-        console.log('User is logged in: ', user.email);
-    } else {
-        console.log('No user is logged in');
-    }
-});
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-section {
+    margin: 20px 0;
+}
+
+.search-section input {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.search-section button {
+    padding: 10px;
+    background-color: #1DB954;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.song-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.song {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.song h3 {
+    margin-bottom: 10px;
+}
+
+audio {
+    width: 100%;
+}
