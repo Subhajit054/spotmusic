@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotMusic</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SpotMusic</h1>
+        <nav>
+            <ul>
+                <li><a href="upload.html">Upload Song</a></li>
+                <li><a href="playlists.html">Your Playlists</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <input type="text" id="search" placeholder="Search for a song...">
+            <button onclick="searchSongs()">Search</button>
+        </section>
+
+        <section class="song-list">
+            <h2>Featured Songs</h2>
+            <div class="song">
+                <h3>Song Title 1</h3>
+                <audio controls>
+                    <source src="https://res.cloudinary.com/your-account-name/video/upload/v12345678/song1.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="song">
+                <h3>Song Title 2</h3>
+                <audio controls>
+                    <source src="https://res.cloudinary.com/your-account-name/video/upload/v12345678/song2.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <!-- Add more songs here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SpotMusic - All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
