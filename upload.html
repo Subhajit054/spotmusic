@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Song - SpotMusic</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Upload Your Song</h1>
+    </header>
+
+    <main>
+        <form id="uploadForm" onsubmit="event.preventDefault(); uploadSong();">
+            <label for="songTitle">Song Title:</label>
+            <input type="text" id="songTitle" required>
+
+            <label for="artistName">Artist Name:</label>
+            <input type="text" id="artistName" required>
+
+            <label for="songFile">Upload MP3 File:</label>
+            <input type="file" id="songFile" accept="audio/mp3" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SpotMusic - All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/upload.js"></script>
+</body>
+</html>
